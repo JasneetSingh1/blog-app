@@ -1,14 +1,16 @@
 import './App.css';
 import UserInfoContext from './context/UserInfoContext';
 import BlogPage from './components/BlogPage';
+import { ThemeProvider } from './context/ThemeProvider';
+import ContentComponent from './components/ContentComponent';
 
 function App() {
 
-  const userInfo = {username: "Admin", isAdmin: true}
+ 
   return (
-    <UserInfoContext.Provider value={userInfo}>
-      <BlogPage></BlogPage>
-    </UserInfoContext.Provider>
+    <ThemeProvider>
+      <ContentComponent></ContentComponent>
+    </ThemeProvider>
   );
 }
 
